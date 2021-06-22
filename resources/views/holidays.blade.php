@@ -5,7 +5,15 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-8">
-            <table class="table table-striped">
+
+          <div class="card">
+            <div class="card-header">
+              South Africa Public Holidays
+            </div>
+            <div class="card-body">
+              {{-- <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}} 
+               <table class="table table-striped mt-5">
                 <thead>
                   <tr>            
                     <th scope="col">Holiday</th>
@@ -21,8 +29,10 @@
                   @endforeach         
                 </tbody>
               </table>
-              <a class="btn btn-primary" href="{{route('pdf')}}">Download PDF</a>
-        </div>
+              <a href="{{route('pdf')}}" class="btn btn-primary">Download PDF</a>
+            </div>
+          </div>
+            </div>
     </div>
 </div>
 

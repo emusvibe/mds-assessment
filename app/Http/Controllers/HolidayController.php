@@ -17,7 +17,7 @@ class HolidayController extends Controller
     {
         $holidays = Holiday::all();
         return view('holidays', compact('holidays'));
-        dd($holidays);
+        //dd($holidays);
     }
 
     public function downloadPDF()

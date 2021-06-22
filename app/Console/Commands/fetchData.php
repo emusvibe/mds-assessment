@@ -42,7 +42,7 @@ class fetchData extends Command
         $holiday = new Holiday(['headers' => ['Accept' => 'application/json']]);
         $response = Http::get('https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForYear&year=2021&country=zaf&holidayType=public_holiday');
         $holidays = json_decode($response->getBody()->getContents());       
-
+        
        foreach($holidays as $holiday) {
         Holiday::updateOrCreate([
             'name' => $holiday->name[0]->text,
